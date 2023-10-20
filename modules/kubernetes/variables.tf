@@ -3,6 +3,7 @@ variable "argocd_namespace" {}
 variable "eks_cluster_endpoint" {}
 variable "eks_cluster_ca_certificate" {}
 variable "eks_cluster_name" {}
+# variable "cluster_kubeconfig" {}
 
 variable "helm_release_name" {}
 variable "helm_release_repo" {}

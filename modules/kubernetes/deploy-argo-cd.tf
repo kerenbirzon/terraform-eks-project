@@ -1,3 +1,6 @@
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
 resource "kubernetes_namespace" "argocd-namespace" {
   metadata {
     annotations = {
@@ -23,4 +26,5 @@ resource "helm_release" "argocd" {
   name       = var.helm_release_name
   repository = var.helm_release_repo
   chart      = var.helm_release_chart
+  namespace = var.argocd_namespace
 }
