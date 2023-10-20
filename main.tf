@@ -62,7 +62,7 @@ module "kubernetes" {
     eks_cluster_endpoint = module.eks.cluster_endpoint
     eks_cluster_ca_certificate = module.eks.cluster_ca_certificate
     eks_cluster_name = module.eks.cluster_name
-    helm_release_name = ""
-    helm_release_repo = ""
-    helm_release_chart = ""
+    helm_release_name = "argocd"
+    helm_release_repo = "https://argoproj.github.io/argo-helm"
+    helm_release_chart = "argo-cd"
 }
