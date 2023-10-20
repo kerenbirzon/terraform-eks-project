@@ -1,0 +1,3 @@
+kubeconfig.yaml
+.terraform*
+terraform.tfstate*
